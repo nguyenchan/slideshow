@@ -6,7 +6,7 @@ var x = setInterval(function() {
     let theDay = new Date("Dec 15, 2018 00:00:00").getTime();
     let partyTime = new Date("Dec 15, 2018 18:00:00").getTime();
     let theNextDay = new Date("Dec 16, 2018 00:00:00").getTime();
-    let theEnDay = new Date("Sep 24, 2018 16:49:00").getTime();
+    let theEnDay = new Date("Dec 1, 2018 00:00:00").getTime();
     // Get todays date and time
     var now = new Date().getTime();
     
