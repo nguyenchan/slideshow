@@ -36,12 +36,12 @@ var x = setInterval(function() {
     //console.log(distance);
     // If the count down is over, write some text 
     if (distanceE < 0) {
-        document.getElementById("subtimer").innerHTML = "Done Phase 1";
+        document.getElementById("subtimer").innerHTML = "#done";
     }
 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("timer").innerHTML = "EXPIRED";
+        document.getElementById("timer").innerHTML = "DONE";
     }
 }, 1000);
 
