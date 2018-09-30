@@ -77,6 +77,11 @@ body {
     justify-content: center;
     font-size: 40px;
 }
+@media only screen and (max-width: 768px){
+  .intro { 
+    background-size: 100% 100vh;
+  }
+}
 /*typer text*/
 body {
     font-family: 'Dancing Script', cursive;
