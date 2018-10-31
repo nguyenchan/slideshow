@@ -32,7 +32,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     align-items: center;
@@ -126,4 +126,23 @@ body {
     from, to { border-color: transparent }
     50% { border-color: orange; }
   }
-  
+
+.map-wrapper {
+    text-align: center;
+}
+
+.mapouter {
+    width: 90vw;
+    height: 60vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+.gmap_canvas {
+    border-radius: 20px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+     -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+         filter: grayscale(100%);
+}
