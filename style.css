@@ -83,6 +83,7 @@ body {
     background-size: cover;
     background-position: 75% center;
     z-index: -10;
+    font-size: 30px;
   }
 }
 /*typer text*/
@@ -134,9 +135,7 @@ body {
 .mapouter {
     width: 96vw;
     height: 60vh;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    
 }
 .gmap_canvas {
     border-radius: 20px;
