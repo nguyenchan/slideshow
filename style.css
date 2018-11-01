@@ -65,7 +65,7 @@ body {
 .intro {
     margin: 0;
     padding: 0;
-    color: antiquewhite;
+    color: white;
     background-color: antiquewhite;
     background: url('DSC_6382.JPG') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -78,14 +78,7 @@ body {
     justify-content: center;
     font-size: 40px;
 }
-@media only screen and (max-width: 768px){
-  .intro { 
-    background-size: cover;
-    background-position: 75% center;
-    z-index: -10;
-    font-size: 30px;
-  }
-}
+
 /*typer text*/
 body {
     font-family: 'Dancing Script', cursive;
@@ -103,7 +96,7 @@ body {
     align-items: center;
 }
 
-.typewriter #typer-text {
+#typer-text {
     color: white;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
@@ -145,3 +138,26 @@ body {
       -o-filter: grayscale(100%);
          filter: grayscale(100%);
 }
+
+footer {
+    background-color: #23B7BA;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 768px){
+    .intro { 
+      background-size: cover;
+      background-position: 75% center;
+      z-index: -10;
+      font-size: 30px;
+    }
+    footer {
+        font-size: 20px;
+    }
+  }
