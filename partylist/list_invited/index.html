@@ -43,7 +43,7 @@
             font-weight: 300;
             height: 80%;
             width: auto;
-            min-height: 400px;
+            min-height: 600px;
             min-width: 300px;
             margin: auto;
             box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);    
@@ -52,7 +52,10 @@
         .list-wrapper {
             border: 1px solid black;
             border-radius: 15px;
+            text-align: justify;
         }
+
+        
     </style>
 
     <script>
@@ -196,7 +199,7 @@
         const LIST = [...list1, ... list2, ...list_py].map((obj, i) => {
             return `
                 <li>
-                    Bạn ${obj.name} | ${obj.invited ? 'Đã mời' : 'Chưa mời'} | ${obj.flag ? 'Tham dự' : 'Không dự'}
+                    <span>Bạn ${obj.name} </span> <span> | ${obj.invited ? 'Đã mời' : 'Chưa mời'} </span>
                 </li>
             `
         }).join('');
