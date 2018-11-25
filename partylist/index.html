@@ -1,206 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script"
+      rel="stylesheet"
+    />
     <title>party-friend-list</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="page-wrapper">
-        <h2 class="list-title">Danh sách khách mời của Nguyên</h2>
-        <div class="list-wrapper">
-            <ol class="main-list">
-
-            </ol>
-        </div>
+      <h2 class="list-title">Danh sách khách mời của Nguyên</h2>
+      <div class="list-wrapper"><ol class="main-list"></ol></div>
     </section>
 
     <style>
-        body {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-            font-family: 'Dancing Script', cursive;
-            background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000") no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-        }
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        font-family: "Dancing Script", cursive;
+        background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000")
+          no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+      }
 
-        ul {
-            list-style: none;
-        }
+      ul {
+        list-style: none;
+      }
 
-        .page-wrapper {
-            background-color: blanchedalmond;
-            padding: 15px;
-            padding-top: 30px;
-            font-weight: 300;
-            height: 80%;
-            width: auto;
-            min-height: 400px;
-            min-width: 300px;
-            margin: auto;
-            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);    
-        }
+      .page-wrapper {
+        background-color: blanchedalmond;
+        padding: 15px;
+        padding-top: 30px;
+        font-weight: 300;
+        height: 80%;
+        width: auto;
+        min-height: 400px;
+        min-width: 300px;
+        margin: auto;
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+      }
 
-        .list-wrapper {
-            border: 1px solid black;
-            border-radius: 15px;
-        }
+      .list-wrapper {
+        border: 1px solid black;
+        border-radius: 15px;
+      }
     </style>
 
     <script>
-        const list1 = [
-            {
-                name: 'Thịnh',
-                group: '1',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Quang',
-                group: '1',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Bảo Duy + vợ',
-                group: '1',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Anh Nhật',
-                group: '1',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Nhất Duy',
-                group: '1',
-                invited: false,
-                flag: true
-            },
-            {
-                name: 'Phương legend',
-                group: '1',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Trí mén +',
-                group: '1',
-                invited: true,
-                flag: true
-            },
+      const list1 = [
+          {
+            name: "Thịnh",
+            group: "1",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Quang",
+            group: "1",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Bảo Duy + vợ",
+            group: "1",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Anh Nhật",
+            group: "1",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Nhất Duy",
+            group: "1",
+            invited: false,
+            flag: true
+          },
+          {
+            name: "Phương legend",
+            group: "1",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Trí mén +",
+            group: "1",
+            invited: true,
+            flag: true
+          }
         ],
-
         list2 = [
-            {
-                name: 'Khánh',
-                group: '2',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Tâm Bò',
-                group: '2',
-                invited: false,
-                flag: true
-            },
-            {
-                name: 'Chuyển',
-                group: '2',
-                invited: true,
-                flag: true
-            },
-            {
-                name:'Vi',
-                group: '2',
-                invited: true,
-                flag: false
-            },
-            {
-                name: 'Thoại',
-                group: '2',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Thủy',
-                group: '2',
-                invited: true,
-                flag: true
-            },
-            {
-                name: 'Vân Bu',
-                group: '2',
-                invited: true,
-                flag: false
-            },
-            {
-                name: 'Tuấn',
-                group: '2',
-                invited: false,
-                flag: false
-            },
-            {
-                name: 'Quý',
-                group: '2',
-                invited: false,
-                flag: false
-            },
-            {
-                name: 'Tính',
-                group: '2',
-                invited: false,
-                flag: false
-            }
-
+          {
+            name: "Khánh",
+            group: "2",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Hoàng",
+            group: "2",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Tâm Bò",
+            group: "2",
+            invited: false,
+            flag: true
+          },
+          {
+            name: "Chuyển",
+            group: "2",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Vi",
+            group: "2",
+            invited: true,
+            flag: false
+          },
+          {
+            name: "Thoại",
+            group: "2",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Thủy",
+            group: "2",
+            invited: true,
+            flag: true
+          },
+          {
+            name: "Vân Bu",
+            group: "2",
+            invited: true,
+            flag: false
+          },
+          {
+            name: "Tuấn",
+            group: "2",
+            invited: false,
+            flag: false
+          },
+          {
+            name: "Quý",
+            group: "2",
+            invited: false,
+            flag: false
+          },
+          {
+            name: "Tính",
+            group: "2",
+            invited: false,
+            flag: false
+          }
         ],
         list_py = [
-            {
-                name: 'Tín',
-                group: '2',
-                invited: false,
-                flag: false
-            },
-            {
-                name: 'Kim Trang',
-                group: '2',
-                invited: false,
-                flag: false
-            },
-            {
-                name: 'Tuyền',
-                group: '2',
-                invited: false,
-                flag: false
-            },
-            {
-                name: 'Như Đao',
-                group: '2',
-                invited: false,
-                flag: false
-            }
+          {
+            name: "Tín",
+            group: "2",
+            invited: false,
+            flag: false
+          },
+          {
+            name: "Kim Trang",
+            group: "2",
+            invited: false,
+            flag: false
+          },
+          {
+            name: "Tuyền",
+            group: "2",
+            invited: false,
+            flag: false
+          },
+          {
+            name: "Như Đao",
+            group: "2",
+            invited: false,
+            flag: false
+          }
         ];
 
-        let main_list = document.querySelector('.main-list');
-        console.log(main_list);
-        const LIST = [...list1, ... list2, ...list_py].map((obj, i) => {
-            return `
-                <li>
-                    Bạn ${obj.name} | ${obj.invited ? 'Đã mời' : 'Chưa mời'} | ${obj.flag ? 'Tham dự' : 'Không dự'}
-                </li>
-            `
-        }).join('');
-        main_list.innerHTML = LIST;
+      let main_list = document.querySelector(".main-list");
+      console.log(main_list);
+      const LIST = [...list1, ...list2, ...list_py]
+        .map((obj, i) => {
+          return `
+                      <li>
+                          Bạn ${obj.name} | ${
+            obj.invited ? "Đã mời" : "Chưa mời"
+          } | ${obj.flag ? "Tham dự" : "Không dự"}
+                      </li>
+                  `;
+        })
+        .join("");
+      main_list.innerHTML = LIST;
     </script>
-</body>
+  </body>
 </html>
