@@ -117,7 +117,7 @@
           {
             name: "Tâm Bò",
             group: "2",
-            invited: false,
+            invited: true,
             flag: true
           },
           {
@@ -201,12 +201,12 @@
       const LIST = [...list1, ...list2, ...list_py]
         .map((obj, i) => {
           return `
-                      <li>
-                          <span>Bạn ${obj.name} </span> <span> | ${
+                            <li>
+                                <span>Bạn ${obj.name} </span> <span> | ${
             obj.invited ? "Đã mời" : "Chưa mời"
           } </span>
-                      </li>
-                  `;
+                            </li>
+                        `;
         })
         .join("");
       main_list.innerHTML = LIST;
