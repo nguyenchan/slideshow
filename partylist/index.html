@@ -152,8 +152,8 @@
           {
             name: "Tuấn",
             group: "2",
-            invited: false,
-            flag: false
+            invited: true,
+            flag: true
           },
           {
             name: "Quý",
@@ -173,25 +173,25 @@
             name: "Tín",
             group: "2",
             invited: false,
-            flag: false
+            flag: true
           },
           {
             name: "Kim Trang",
             group: "2",
             invited: false,
-            flag: false
+            flag: true
           },
           {
             name: "Tuyền",
             group: "2",
             invited: false,
-            flag: false
+            flag: true
           },
           {
             name: "Như Đao",
             group: "2",
             invited: false,
-            flag: false
+            flag: true
           }
         ];
 
@@ -200,12 +200,12 @@
       const LIST = [...list1, ...list2, ...list_py]
         .map((obj, i) => {
           return `
-                            <li>
-                                Bạn ${obj.name} | ${
+                                        <li>
+                                            Bạn ${obj.name} | ${
             obj.invited ? "Đã mời" : "Chưa mời"
           } | ${obj.flag ? "Tham dự" : "Không dự"}
-                            </li>
-                        `;
+                                        </li>
+                                    `;
         })
         .join("");
       main_list.innerHTML = LIST;
