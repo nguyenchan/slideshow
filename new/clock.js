@@ -12,7 +12,7 @@ function timer(destination) {
     let display = displayTimeLeft(secondsLeft);
     //console.log(secondsLeft)
     if (secondsLeft < 0) {
-      maintimer.textContent = "ok";
+      maintimer.textContent = "done";
       clearInterval(countDown);
       return;
     }
@@ -52,25 +52,40 @@ timer(target);
 
 const panel1 = document.querySelector(".panel1"),
   panel2 = document.querySelector(".panel2"),
-  panel3 = document.querySelector(".panel3");
+  panel3 = document.querySelector(".panel3"),
+  cap1 = document.querySelector(".panel_cap1"),
+  cap2 = document.querySelector(".panel_cap2"),
+  cap3 = document.querySelector(".panel_cap3");
 panel1.addEventListener("click", () => {
   panel1.classList.add("open");
   panel2.classList.remove("open");
   panel3.classList.remove("open");
+  cap1.classList.add("hidden");
+  cap2.classList.remove("hidden");
+  cap3.classList.remove("hidden");
 });
 panel2.addEventListener("click", () => {
   panel2.classList.add("open");
   panel1.classList.remove("open");
   panel3.classList.remove("open");
+  cap2.classList.add("hidden");
+  cap1.classList.remove("hidden");
+  cap3.classList.remove("hidden");
 });
 panel3.addEventListener("click", () => {
   panel3.classList.add("open");
   panel2.classList.remove("open");
   panel1.classList.remove("open");
+  cap3.classList.add("hidden");
+  cap2.classList.remove("hidden");
+  cap1.classList.remove("hidden");
 });
 
 maintimer.addEventListener("click", () => {
   panel1.classList.remove("open");
   panel2.classList.remove("open");
   panel3.classList.remove("open");
+  cap1.classList.remove("hidden");
+  cap2.classList.remove("hidden");
+  cap3.classList.remove("hidden");
 });

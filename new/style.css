@@ -3,15 +3,17 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  min-width: 320px;
 }
 
 .clock {
   color: white;
-  height: 1.2rem;
-  width: 12rem;
+  height: 1.6rem;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
   padding: 0.3rem;
   position: fixed;
   top: 0;
@@ -56,19 +58,31 @@ body {
   align-content: center;
   display: flex;
   flex-direction: column;
+  font-family: "Dancing Script", cursive;
 }
 
 .panel1 {
-  background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
+  /* background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); */
+  background-image: url(../public/bg1.JPG);
+  background-position: 70% bottom;
 }
 .panel2 {
-  background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500);
+  /* background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); */
+  background-image: url(../public/bg-2.JPG);
+  background-position: 55% center;
 }
 .panel3 {
-  background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+  /* background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); */
+  background-image: url(../public/bg3.JPG);
+  background-position: 47% center;
 }
 
 .panel.open {
   font-size: 40px;
   flex: 7;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }

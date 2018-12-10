@@ -1,42 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="./public/favicon.ico" type="image/gif" sizes="16x16">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-</head>
-<body>
-    <nav class="nav-bar" id="nav-bar">
-        <ul>
-            <li class="timer-box timerE" id="timerE-box">
-                <span class="timer-content">#engagement</span>
-                <span class="timer-content" id="subtimer">counting...</span>
-            </li>
-            <li class="timer-box timerM" id="timer-box">
-                <span class="timer-content">#weddingday</span>
-                <span class="timer-content" id="timer">counting...</span>
-            </li>
-        </ul>
-    </nav>
-    <div class="intro">
-        <span>Chấn Nguyên & Bảo Trân</span>
-    </div>
-    <section class="bottom-section">
-            <div class="map-wrapper">
-                <h2 id="map-title">17h00' 15/12/2018</h2>
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=pytopia&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div>
-            </div>
-            <div class="signbox">
-                <span id="sign" class="play" style="background-image: url('./pics/x.JPG')"></span>
-            </div>
-    </section>    
-    <script src="script.js"></script>
-    <footer class="footer">
-        <h2>“ The best gift for us is your participation, thanks to all ”</h2>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="./public/favicon.ico"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+    <link rel="stylesheet" href="./new/style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script"
+      rel="stylesheet"
+    />
+
+    <title>NC</title>
+  </head>
+  <body>
+    <main class="page_wrapper">
+      <div class="clock">
+        <div class="timmer_title">#countdown:</div>
+        <div id="maintimer">counting...</div>
+        <a href="./Map/index.html">
+          <div class="map_btn">
+            <span>Map</span>
+            <img class="map_img" src="/public/maps-icon.png" alt="map" />
+            <style>
+              .map_btn {
+                height: 1.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1px;
+              }
+              .map_img {
+                height: 100%;
+              }
+              a {
+                text-decoration: none;
+                color: magenta;
+                border: 1px solid green;
+                transition: all 0.2s ease-in-out;
+              }
+              a:hover {
+                background-color: black;
+                transform: scale(1.2);
+                border: none;
+              }
+            </style>
+          </div>
+        </a>
+      </div>
+      <div class="panels header">
+        <div class="panel panel1">
+          <div class="panel_cap1">
+            <span>Chấn Nguyên</span> <span>&</span> <span>Bảo Trân</span>
+            <style>
+              .panel_cap1 {
+                display: flex;
+                flex-direction: column;
+              }
+            </style>
+          </div>
+        </div>
+        <div class="panel panel2">
+          <div class="panel_cap2">
+            <span>In love</span> <span>over 6 years</span>
+          </div>
+          <style>
+            .panel_cap2 {
+              display: flex;
+              flex-direction: column;
+            }
+          </style>
+        </div>
+        <div class="panel panel3">
+          <div class="panel_cap3"><span>♥</span></div>
+        </div>
+        <style>
+          .panel_cap3 {
+            display: flex;
+            flex-direction: column;
+          }
+        </style>
+      </div>
+      <div class="video_wrapper">
+        <iframe
+          src="https://drive.google.com/file/d/1Uk-4yMuNHxJNgKuL-vgqA76Mv8_G8Az7/preview"
+          width="640"
+          height="480"
+          allowfullscreen
+        ></iframe>
+        <style>
+          .video_wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin-bottom: 2%;
+            height: 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          }
+          .video_wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        </style>
+      </div>
+      <div class="footer">
+        <div class="audio_wrapper">
+          <h3 class="f_caption">
+            “ The best gift for us is your participation, thanks to all ”
+          </h3>
+          <audio controls loop>
+            <source src="./public/Everytime_We_Touch.mp3" type="audio/mpeg" />
+            <source src="./public/Girls_like_you.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <style>
+          .audio_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+          .f_caption {
+            padding: 0.3rem;
+            text-align: center;
+            font-family: "Dancing Script", cursive;
+          }
+        </style>
+      </div>
+    </main>
+    <script src="./new/clock.js"></script>
+  </body>
 </html>

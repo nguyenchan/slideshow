@@ -85,7 +85,7 @@
           {
             name: "Nhất Duy",
             group: "1",
-            invited: false,
+            invited: true,
             flag: true
           },
           {
@@ -159,13 +159,13 @@
           {
             name: "Quý",
             group: "2",
-            invited: false,
+            invited: true,
             flag: false
           },
           {
             name: "Tính",
             group: "2",
-            invited: false,
+            invited: true,
             flag: false
           }
         ],
@@ -173,7 +173,7 @@
           {
             name: "Tín",
             group: "2",
-            invited: false,
+            invited: true,
             flag: true
           },
           {
@@ -185,14 +185,14 @@
           {
             name: "Tuyền",
             group: "2",
-            invited: false,
+            invited: true,
             flag: true
           },
           {
             name: "Như Đao",
             group: "2",
-            invited: false,
-            flag: false
+            invited: true,
+            flag: true
           }
         ];
 
@@ -201,14 +201,14 @@
       const LIST = [...list1, ...list2, ...list_py]
         .map((obj, i) => {
           return `
-                                        <li>
-                                            <span>Bạn ${
-                                              obj.name
-                                            } </span> <span> | ${
+                                                    <li>
+                                                        <span>Bạn ${
+                                                          obj.name
+                                                        } </span> <span> | ${
             obj.invited ? "Đã mời" : "Chưa mời"
           } </span>
-                                        </li>
-                                    `;
+                                                    </li>
+                                                `;
         })
         .join("");
       main_list.innerHTML = LIST;
