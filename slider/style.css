@@ -1,0 +1,171 @@
+html {
+  box-sizing: border-box;
+  background: url("https://source.unsplash.com/NFs6dRTBgaM/2000x2000") fixed;
+  background-size: cover;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.items {
+  height: 800px;
+  padding: 100px;
+  width: 100%;
+  border: 1px solid white;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0;
+  perspective: 500px;
+}
+
+.items.active {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+.item {
+  width: 300px;
+  height: calc(100% - 40px);
+  display: inline-flex;
+  /* align-items: center;
+  justify-content: center; */
+  font-size: 40px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.15);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  padding: 10px;
+}
+
+.item:nth-child(9n + 1) {
+  background-image: url(../public/i1.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 2) {
+  background-image: url(../public/i2.png);
+  background-position: center center;
+}
+.item:nth-child(9n + 3) {
+  background-image: url(../public/i3.png);
+  background-position: center top;
+}
+.item:nth-child(9n + 4) {
+  background-image: url(../public/i4.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 5) {
+  background-image: url(../public/i5.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 6) {
+  background-image: url(../public/i6.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 7) {
+  background-image: url(../public/i7.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 8) {
+  background-image: url(../public/i8.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 9) {
+  background-image: url(../public/i9.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 10) {
+  background-image: url(../public/i10.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 11) {
+  background-image: url(../public/i11.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 12) {
+  background-image: url(../public/i12.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 13) {
+  background-image: url(../public/i13.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 14) {
+  background-image: url(../public/i14.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 15) {
+  background-image: url(../public/i15.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 16) {
+  background-image: url(../public/i16.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 17) {
+  background-image: url(../public/i17.png);
+  background-position: right bottom;
+}
+.item:nth-child(9n + 18) {
+  background-image: url(../public/i18.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 19) {
+  background-image: url(../public/i19.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 20) {
+  background-image: url(../public/i20.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 21) {
+  background-image: url(../public/i21.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 22) {
+  background-image: url(../public/i22.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 23) {
+  background-image: url(../public/i23.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 24) {
+  background-image: url(../public/i24.png);
+  background-position: center bottom;
+}
+.item:nth-child(9n + 25) {
+  background-image: url(../public/i25.png);
+  background-position: center bottom;
+}
+
+.item:nth-child(even) {
+  transform: scaleX(1.31) rotateY(40deg);
+}
+.item:nth-child(odd) {
+  transform: scaleX(1.31) rotateY(-40deg);
+}
