@@ -48,9 +48,9 @@ body {
 }
 
 .item {
-  width: 280px;
-  min-width: 250px;
-  max-width: 300px;
+  width: 320px;
+  min-width: 300px;
+  max-width: 450px;
   height: calc(100% - 40px);
   display: inline-flex;
   /* align-items: center;
@@ -64,7 +64,7 @@ body {
   background-size: cover;
   padding: 10px;
   background-color: wheat;
-  background-position: center center;
+  background-position: center top;
 }
 
 .item:nth-child(9n + 1) {
@@ -93,7 +93,7 @@ body {
 }
 .item:nth-child(9n + 7) {
   background-image: url(../public/i7.png);
-  background-position: center bottom;
+  background-position: center top;
 }
 .item:nth-child(9n + 8) {
   background-image: url(../public/i8.png);
@@ -145,19 +145,19 @@ body {
 }
 .item:nth-child(9n + 20) {
   background-image: url(../public/i20.png);
-  background-position: center bottom;
+  background-position: center top;
 }
 .item:nth-child(9n + 21) {
   background-image: url(../public/i21.png);
-  background-position: center bottom;
+  background-position: center top;
 }
 .item:nth-child(9n + 22) {
   background-image: url(../public/i22.png);
-  background-position: center bottom;
+  background-position: center top;
 }
 .item:nth-child(9n + 23) {
   background-image: url(../public/i23.png);
-  background-position: center center;
+  background-position: center top;
 }
 .item:nth-child(9n + 24) {
   background-image: url(../public/i24.png);
@@ -173,4 +173,74 @@ body {
 }
 .item:nth-child(odd) {
   transform: scaleX(1.31) rotateY(-40deg);
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .items {
+    padding: 20px;
+    padding-bottom: 0;
+    perspective: 4200px;
+  }
+
+  .item {
+    height: 90%;
+    min-width: 300px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .items {
+    height: 98vh;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .item {
+    height: 90%;
+    min-width: 300px;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .items {
+    height: 98vh;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .item {
+    height: 90%;
+    min-width: 350px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .items {
+    height: 90vh;
+  }
+
+  .item {
+    height: 90%;
+    min-width: 350px;
+  }
 }
