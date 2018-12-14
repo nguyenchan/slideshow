@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
-  background: url("https://source.unsplash.com/NFs6dRTBgaM/2000x2000") fixed;
+  /* background: url("https://source.unsplash.com/NFs6dRTBgaM/2000x2000") fixed; */
+  background-image: linear-gradient(120deg, #fccb90, #d57eeb);
   background-size: cover;
 }
 
@@ -48,6 +49,7 @@ body {
 
 .item {
   width: 280px;
+  min-width: 250px;
   max-width: 300px;
   height: calc(100% - 40px);
   display: inline-flex;
